@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { Options } from '../components/Options';
 import { Score } from '../components/Score';
 
 const Home: NextPage = () => {
@@ -8,12 +9,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Rock Paper Scissors Game</title>
         <meta name='description' content='Rock Paper Scissors Game App' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/logo.svg' />
       </Head>
 
-      <main className='h-screen w-screen bg-slate-800 text-white'>
+      <main className='min-h-screen bg-slate-800 text-white'>
         <section className='pt-6'>
           <Score />
+          <Options />
         </section>
       </main>
     </div>
