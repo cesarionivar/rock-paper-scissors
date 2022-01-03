@@ -16,7 +16,7 @@ export const Options = () => {
           <img src='/icon-paper.svg' alt='Paper' />
         </button>
         <button
-          id='scissor'
+          id='scissors'
           onClick={handleSelection}
           className='flex justify-center items-center w-32 h-32 rounded-full bg-white hover:bg-gray-300  
           text-black border-8 

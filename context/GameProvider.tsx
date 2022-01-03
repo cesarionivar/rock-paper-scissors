@@ -12,8 +12,6 @@ export const GameProvider = ({ children }: GameProviderProps) => {
     setSelection(e.currentTarget.id);
   };
 
-  console.log(selection);
-
   return (
     <GameContext.Provider
       value={{
