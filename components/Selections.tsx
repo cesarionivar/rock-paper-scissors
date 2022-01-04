@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
 import { OptionSelected } from './OptionSelected';
+import { Winner } from './Winner';
 
 export const Selections = () => {
   const { selection, CPUSelection, handleSelection } = useContext(GameContext);
@@ -18,16 +19,12 @@ export const Selections = () => {
         </div>
       </div>
       <div className='grid place-items-center mt-12'>
-        {selection === CPUSelection ? (
-          <p>Not one wins, it's a tie</p>
-        ) : (
-          <p>Need to verify who wins</p>
-        )}
+        <Winner user={selection} CPU={CPUSelection} />
       </div>
       <div className='grid place-items-center mt-14'>
         <button
           onClick={handleSelection}
-          className='bg-emerald-600 px-4 py-2 rounded hover:bg-emerald-700'
+          className='bg-emerald-600 px-4 py-2 rounded hover:bg-emerald-700 mb-7'
         >
           Play Again
         </button>
