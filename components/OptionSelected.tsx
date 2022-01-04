@@ -9,7 +9,7 @@ export const OptionSelected = ({ selection }: OptionSelectedProps) => {
 
   return (
     <button
-      className={`flex justify-center items-center w-32 h-32 rounded-full bg-white hover:bg-gray-300  border-8 
+      className={`flex justify-center items-center w-32 h-32 rounded-full bg-white cursor-default  border-8 
     border-${color}-600`}
     >
       <img src={`/icon-${selection}.svg`} alt={`${selection}`} />

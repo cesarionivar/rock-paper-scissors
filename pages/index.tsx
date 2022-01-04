@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useContext } from 'react';
-import { OptionSelected } from '../components/OptionSelected';
+
 import { Options } from '../components/Options';
 import { Score } from '../components/Score';
+import { Selections } from '../components/Selections';
 import { GameContext } from '../context/GameContext';
 
 const Home: NextPage = () => {
@@ -21,16 +22,7 @@ const Home: NextPage = () => {
         <section className='pt-6'>
           <Score />
 
-          {!selection ? (
-            <Options />
-          ) : (
-            <div className='flex justify-center items-center gap-10 mt-20'>
-              <div>
-                <h2 className='text-3xl font-bold'>You picked</h2>
-                <OptionSelected selection={selection} />
-              </div>
-            </div>
-          )}
+          {!selection ? <Options /> : <Selections />}
         </section>
       </main>
     </div>
