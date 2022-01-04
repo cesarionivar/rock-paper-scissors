@@ -3,7 +3,7 @@ import { GameContext } from '../context/GameContext';
 import { OptionSelected } from './OptionSelected';
 
 export const Selections = () => {
-  const { selection, handleSelection } = useContext(GameContext);
+  const { selection, CPUSelection, handleSelection } = useContext(GameContext);
 
   return (
     <>
@@ -14,11 +14,15 @@ export const Selections = () => {
         </div>
         <div className='flex flex-col items-center gap-6'>
           <h2 className='text-3xl font-bold'>The CPU picked</h2>
-          <OptionSelected selection={selection} />
+          <OptionSelected selection={CPUSelection} />
         </div>
       </div>
       <div className='grid place-items-center mt-12'>
-        <p>Not one wins, it's a tie</p>
+        {selection === CPUSelection ? (
+          <p>Not one wins, it's a tie</p>
+        ) : (
+          <p>Need to verify who wins</p>
+        )}
       </div>
       <div className='grid place-items-center mt-14'>
         <button
