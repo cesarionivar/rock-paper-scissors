@@ -18,7 +18,8 @@ export const Winner = ({ user, CPU }: WinnerProps) => {
     <>
       {winner === 'tie' ? (
         <p className='text-3xl'>
-          🤝 <span className='font-bold text-yellow-200'>It's a tie</span> 😋
+          🤝 <span className='font-bold text-yellow-200'>It&apos;s a tie</span>{' '}
+          😋
         </p>
       ) : winner === 'user' ? (
         <p className='text-3xl'>

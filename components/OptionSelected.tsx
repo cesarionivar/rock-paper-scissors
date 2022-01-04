@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getColorSelection } from '../helpers/getColorSelection';
 
 type OptionSelectedProps = {
@@ -12,7 +13,12 @@ export const OptionSelected = ({ selection }: OptionSelectedProps) => {
       className={`flex justify-center items-center w-32 h-32 rounded-full bg-white cursor-default  border-8 
     border-${color}-600`}
     >
-      <img src={`/icon-${selection}.svg`} alt={`${selection}`} />
+      <Image
+        width={60}
+        height={60}
+        src={`/icon-${selection}.svg`}
+        alt={`${selection}`}
+      />
     </button>
   );
 };

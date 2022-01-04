@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
 
@@ -13,7 +14,7 @@ export const Options = () => {
           className='flex justify-center items-center w-32 h-32 rounded-full bg-white hover:bg-gray-300  border-8 
           border-blue-600'
         >
-          <img src='/icon-paper.svg' alt='Paper' />
+          <Image width={60} height={60} src='/icon-paper.svg' alt='Paper' />
         </button>
         <button
           id='scissors'
@@ -22,7 +23,12 @@ export const Options = () => {
           text-black border-8 
           border-yellow-600'
         >
-          <img src='/icon-scissors.svg' alt='Scissors' />
+          <Image
+            width={60}
+            height={60}
+            src='/icon-scissors.svg'
+            alt='Scissors'
+          />
         </button>
       </div>
       <button
@@ -31,7 +37,7 @@ export const Options = () => {
         className='flex justify-center items-center w-32 h-32 rounded-full bg-white hover:bg-gray-300  border-8 
         border-red-600'
       >
-        <img src='/icon-rock.svg' alt='Rock' />
+        <Image width={60} height={60} src='/icon-rock.svg' alt='Rock' />
       </button>
     </div>
   );
